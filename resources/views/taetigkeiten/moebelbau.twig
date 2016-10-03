@@ -1,0 +1,41 @@
+{% extends "layout.twig" %}
+
+{% block title %}Möbelbau - Galerie{% endblock %}
+{% block nav3 %}id="active"{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{{ path_for('index') }}styles/gallery.min.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" style="min-height: 100vh">
+
+  <div class="container">
+
+    <h2 style="margin-top: 30px;">Möbelbau - Galerie</h2>
+    <hr style="border-color: #E3493B;">
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <a href="{{ path_for('galerie_id', {'id': '5'}) }}" class="gallery-preview"><div style="background-image: url('{{ path_for('index') }}gfx/moebel/1.jpg');" class="previewimg"></div></a>
+      </div>
+      <div class="col-md-3 desc">
+        <h3><a href="{{ path_for('galerie_id', {'id': '5'}) }}" class="preview-text">Möbelbau</a></h3>
+        <p>Feiner Möbelbau aus heimischen Hölzern</p>
+      </div>
+
+      <div class="col-md-3">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <br><br><br>
+
+</div>
+
+{% endblock %}

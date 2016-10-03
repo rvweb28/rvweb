@@ -1,0 +1,47 @@
+{% extends "gallery/gallery_layout.twig" %}
+
+{% block gallery_title %}Eremitage{% endblock %}
+{% block gallery_title2 %}Eremitage{% endblock %}
+
+{% block gallery %}
+<div class="row">
+
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/1.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/1.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/2.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/2.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/3.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/3.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/4.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/4.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/5.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/5.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/6.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/6.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <!--div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/3.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/3.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/eremitage/4.jpg');" data-gallery="{{ path_for('index') }}gfx/eremitage/4.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div-->
+
+</div>
+{% endblock %}

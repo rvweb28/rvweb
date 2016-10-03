@@ -1,0 +1,27 @@
+{% extends "gallery/gallery_layout.twig" %}
+
+{% block gallery_title %}Orgelfiguren{% endblock %}
+{% block gallery_title2 %}Orgelfiguren{% endblock %}
+
+{% block gallery %}
+<div class="row">
+
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/amerika/1.jpg');" data-gallery="{{ path_for('index') }}gfx/amerika/1.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/amerika/2.jpg');" data-gallery="{{ path_for('index') }}gfx/amerika/2.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/amerika/3.jpg');" data-gallery="{{ path_for('index') }}gfx/amerika/3.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/amerika/4.jpg');" data-gallery="{{ path_for('index') }}gfx/amerika/4.jpg" class="previewimg clickable-img"></div>
+    <p class="description"></p>
+  </div>
+
+</div>
+{% endblock %}

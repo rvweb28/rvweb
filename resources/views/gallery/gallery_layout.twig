@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block nav3 %}id="active"{% endblock %}
+
+{% block title %}{% block gallery_title %}{% endblock %}{% endblock %}
+{% block header %}
+<link rel="stylesheet" href="{{ path_for('index') }}styles/gallery.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="min-height: 100vh; padding-top: 10px;">
+
+  <div class="container">
+    <h2><a class="btn btn-default" href="{{ path_for('galerie') }}"><span class="glyphicon glyphicon-menu-left"></span>
+      Zurück</a> {% block gallery_title2 %}{% endblock %}</h2>
+    <hr style="border-color: #E3493B;">
+
+    {% block gallery %}
+
+    {% endblock %}
+
+  </div>
+
+</div>
+
+<div id="myModal" class="modal">
+
+  <span class="close-span" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+  <span id="previous-btn" class="next-btn previous"><span class="glyphicon glyphicon-menu-left"></span></span>
+  <span id="next-btn" class="next-btn next"><span class="glyphicon glyphicon-menu-right"></span></span>
+
+  <img class="modal-content" target="_blank" href="#" id="modal_img">
+
+  <div id="caption"></div>
+</div>
+
+  </div>
+
+</div>
+{% endblock %}
+
+{% block footer %}
+<script src="{{ path_for('index') }}scripts/gallery.min.js"></script>
+{% endblock %}
