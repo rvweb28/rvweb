@@ -3,9 +3,6 @@
 {% block title %}Kontakt - Robert Voit{% endblock %}
 {% block nav6 %}id="active"{% endblock %}
 
-{% block header %}
-<script src="{{ path_for('index') }}scripts/contact.min.js"></script>
-{% endblock %}
 
 {% block content %}
 
@@ -78,9 +75,12 @@
   <div id="googleMap" style="height:400px;width:100%;margin-bottom: 80px;"></div>
 </div>
 
+{% endblock %}
+
+{% block footer %}
+<script src="{{ path_for('index') }}scripts/contact.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSPalp9U-CxhEAgR07r2EBxq37q2yNIl4"></script>
 <script>
 function initialize(){var e={center:myCenter,zoom:14,mapTypeId:google.maps.MapTypeId.ROADMAP},n=new google.maps.Map(document.getElementById("googleMap"),e),o=new google.maps.Marker({position:myCenter});o.setMap(n);var a=new google.maps.InfoWindow({content:"Hütten 14, 95485 Warmensteinach"});google.maps.event.addListener(o,"click",function(){a.open(n,o)})}var myCenter=new google.maps.LatLng(50.006803,11.819808);google.maps.event.addDomListener(window,"load",initialize);
 </script>
-
 {% endblock %}

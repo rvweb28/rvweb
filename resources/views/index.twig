@@ -3,10 +3,6 @@
 {% block title %}Robert Voit - Holzbildhauer &amp; Schreiner{% endblock %}
 {% block nav1 %}id="active"{% endblock %}
 
-{% block header %}
-<script src="{{ path_for('index') }}scripts/contact.min.js"></script>
-{% endblock %}
-
 {% block content %}
 
     <script>
@@ -121,4 +117,8 @@
 
     </div>
 
+{% endblock %}
+
+{% block footer %}
+<script src="{{ path_for('index') }}scripts/contact.min.js"></script>
 {% endblock %}
