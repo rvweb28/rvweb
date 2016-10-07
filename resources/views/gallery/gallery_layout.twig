@@ -23,6 +23,18 @@
 
 </div>
 
+<div id="loader">
+
+  <div class="bouncer" style="top: 50%">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <span class="close-span" onclick="abortImgLoading();">&times;</span>
+
+</div>
+
 <div id="myModal" class="modal">
 
   <span class="close-span" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
@@ -33,10 +45,6 @@
   <img class="modal-content" target="_blank" href="#" id="modal_img">
 
   <div id="caption"></div>
-</div>
-
-  </div>
-
 </div>
 {% endblock %}
 

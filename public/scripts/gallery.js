@@ -1,3 +1,6 @@
+var isLoaded = false;
+var imgClickBeforeLoaded = undefined;
+
 var modal = $('#myModal');
 
 var modalImg = $('#modal_img');
@@ -18,13 +21,45 @@ $(document).ready(function() {
   totalImgAmount = imgNumber;
 });
 
+$(window).load(function() {
+
+  $('#loader').css('display', 'none');
+  isLoaded = true;
+
+  if(imgClickBeforeLoaded !== undefined) {
+
+    currentImg = imgClickBeforeLoaded.attr('data-img-no');
+    modal.css('display', 'block');
+    modalImg.attr('src', imgClickBeforeLoaded.attr('data-gallery'));
+    captionText.html(imgClickBeforeLoaded.next().html());
+    $("body").addClass("disable-scroll");
+  }
+});
+
+// call over onclick
+function abortImgLoading() {
+  imgClickBeforeLoaded = undefined;
+  $('#loader').css('display', 'none');
+  $("body").removeClass("disable-scroll");
+}
+
 $(".clickable-img").on('click', function() {
 
-  currentImg = $(this).attr('data-img-no');
-  modal.css('display', 'block');
-  modalImg.attr('src', $(this).attr('data-gallery'));
-  captionText.html($(this).next().html());
-  $("body").addClass("disable-scroll");
+  if(isLoaded) {
+
+    currentImg = $(this).attr('data-img-no');
+    modal.css('display', 'block');
+    modalImg.attr('src', $(this).attr('data-gallery'));
+    captionText.html($(this).next().html());
+    $("body").addClass("disable-scroll");
+
+  } else {
+
+    $('#loader').css('display', 'block');
+    imgClickBeforeLoaded = $(this);
+    $("body").addClass("disable-scroll");
+
+  }
 });
 
 $('.close-span').on('click', function() {
