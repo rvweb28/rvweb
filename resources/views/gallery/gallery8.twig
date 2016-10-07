@@ -1,0 +1,27 @@
+{% extends "gallery/gallery_layout.twig" %}
+
+{% block gallery_title %}Bildhauerarbeiten{% endblock %}
+{% block gallery_title2 %}Bildhauerarbeiten{% endblock %}
+
+{% block gallery %}
+<div class="row">
+
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/bildhauerarbeiten/1.jpg');" data-gallery="{{ path_for('index') }}gfx/bildhauerarbeiten/1.jpg" class="previewimg clickable-img"></div>
+    <p class="description">Kopie, Chorgestühl Ulmer Münster</p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/bildhauerarbeiten/2.jpg');" data-gallery="{{ path_for('index') }}gfx/bildhauerarbeiten/2.jpg" class="previewimg clickable-img"></div>
+    <p class="description">Kopie, Chorgestühl Ulmer Münster</p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/bildhauerarbeiten/3.jpg');" data-gallery="{{ path_for('index') }}gfx/bildhauerarbeiten/3.jpg" class="previewimg clickable-img"></div>
+    <p class="description">Riemenschneiderkopie</p>
+  </div>
+  <div class="col-md-3 ">
+    <div style="background-image: url('{{ path_for('index') }}gfx/bildhauerarbeiten/4.jpg');" data-gallery="{{ path_for('index') }}gfx/bildhauerarbeiten/4.jpg" class="previewimg clickable-img"></div>
+    <p class="description">Kopie einer Barockmadonna</p>
+  </div>
+
+</div>
+{% endblock %}

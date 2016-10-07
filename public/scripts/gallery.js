@@ -72,11 +72,13 @@ $('#next-btn').on('click', function() {
   if(currentImg < totalImgAmount-1) {
     currentImg++;
     var imgSrc = $('div[data-img-no="'+currentImg+'"]').attr('data-gallery');
+    var caption = $('div[data-img-no="'+currentImg+'"]').next().html();
 
     modalImg.animate({left: '-100%'}, 350, function() {
 
       modalImg.css('left', '100%');
       modalImg.attr('src', imgSrc);
+      captionText.html(caption);
       modalImg.animate({left: '0'}, 150);
     });
   }
@@ -87,11 +89,13 @@ $('#previous-btn').on('click', function() {
   if(currentImg > 1) {
     currentImg--;
     var imgSrc = $('div[data-img-no="'+currentImg+'"]').attr('data-gallery');
+    var caption = $('div[data-img-no="'+currentImg+'"]').next().html();
 
     modalImg.animate({left: '100%'}, 350, function() {
 
       modalImg.css('left', '-100%');
       modalImg.attr('src', imgSrc);
+      captionText.html(caption);
       modalImg.animate({left: '0'}, 150);
     });
   }
