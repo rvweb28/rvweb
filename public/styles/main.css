@@ -185,7 +185,7 @@ footer > div {
 
 
 .btn-default {
-  border-radius: 0px;
+  border-radius: 2px;
   transition: 0.15s;
 }
 .btn-default:hover {
