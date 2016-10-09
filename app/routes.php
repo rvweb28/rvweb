@@ -23,7 +23,7 @@ $app->get('/galerie', function($request, $response) {
 
 $app->get('/galerie/{id}', function($request, $response, $args) {
 
-  $gallery_amount = 8;
+  $gallery_amount = 10;
 
   if($args['id'] < 1 || $args['id'] > $gallery_amount) {
     $id = 1;
