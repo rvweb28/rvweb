@@ -227,5 +227,11 @@
   .modal-content {
     width: 100%;
     height: auto;
+    margin-top: 100px;
+  }
+  .next-btn {
+    position: fixed;
+    top: auto;
+    bottom: 15px;
   }
 }
