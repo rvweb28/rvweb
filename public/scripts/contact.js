@@ -1,7 +1,4 @@
-$(document).ready(function() {
-  removeErrors();
-  $(".loader").hide();
-});
+
 function send() {
 
   removeErrors();
@@ -10,6 +7,7 @@ function send() {
     var email = $("#email").val().trim();
     var msg = $("#msg").val().trim();
 
+    $(".loader").removeClass('hidden');
     $(".loader").fadeIn();
 
     $.post("https://robert-voit.de/send_mail",
@@ -19,15 +17,15 @@ function send() {
     },
     function(data, status) {
 
-      if(data == 'ok') {
+      if(data === 'ok') {
 
         $("#email").val("");
         $("#msg").val("");
-        $("#alert3").show();
+        $("#alert3").removeClass('hidden');
 
       } else {
 
-        $("#alert2").show();
+        $("#alert2").removeClass('hidden');
       }
       $(".loader").fadeOut();
     });
@@ -40,13 +38,13 @@ function check() {
 
   if(email == '' || msg == '') {
 
-    $("#alert1").show();
+    $("#alert1").removeClass('hidden');
     return false;
   }
   return true;
 }
 function removeErrors() {
-  $("#alert1").hide();
-  $("#alert2").hide();
-  $("#alert3").hide();
+  $("#alert1").addClass('hidden');
+  $("#alert2").addClass('hidden');
+  $("#alert3").addClass('hidden');
 }
