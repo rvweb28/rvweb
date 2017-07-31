@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/phpmailer/PHPMailerAutoload.php';
+
 $app->get('/', function($request, $response) {
   return $this->view->render($response, 'index.twig');
 })->setName('index');
@@ -60,13 +62,32 @@ $app->post('/send_mail', function($request, $response, $args) {
 
   $from = filter_var($request->getParam('email'), FILTER_SANITIZE_EMAIL);
   $to = 'voit.robert@t-online.de';
-  $msg = filter_var($request->getParam('msg'), FILTER_SANITIZE_STRING);
+  $msg = "Von: $from\n\n" . filter_var($request->getParam('msg'), FILTER_SANITIZE_STRING);
 
-  $header = 'From: '. $from . "\r\n" .
+  $subject = "Kontaktanfrage über robert-voit.de";
+  $header = 'From: ' . $from . "\r\n" .
     'Reply-To: ' . $from . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-  mail($to, "Kontaktanfrage über robert-voit.de", $msg, $header);
+  $mail = new PHPMailer();
+
+  $mail->IsSMTP();
+  $mail->Host     = 'smtp.zoho.com';
+  $mail->SMTPAuth = true;
+  $mail->Username = 'trash@moritz-schramm.com';
+  $mail->Password = 'thisisthetrashpasswordofthetrashemail';
+  $mail->Port = 587;
+  $mail->SMTPSecure = 'tls';
+
+  $mail->Subject  = $subject;
+  $mail->Body     = $msg;
+  $mail->From     = 'trash@moritz-schramm.com';
+  $mail->FromName = $from;
+  $mail->AddReplyTo($from);
+  $mail->CharSet  =  "utf-8";
+  $mail->AddAddress($to);
+  $mail->Send();
+
   return 'ok';
 
 })->setName('send_mail');
