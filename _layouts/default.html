@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Robert Voit - Holzbildhauer und Schreiner - Restaurierungen seit 1985 - Robert Voit, 95485 Warmensteinach, Hütten 14 - Umgebung Bayreuth">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="icon" href="/assets/imgs/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+sans|Lora" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/styles/main.min.css">
+    {{ page.header }}
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="/">Robert Voit</a>
+       </div>
+       <div class="collapse navbar-collapse" id="navbar">
+         <ul class="nav navbar-nav">
+           <li {% if page.ref == "home" %}id="active"{% endif %}><a href="/">Startseite</a></li>
+           <li {% if page.ref == "person" %}id="active"{% endif %}><a href="/person">Zur Person</a></li>
+           <li {% if page.ref == "taetigkeiten" %}id="active"{% endif %}><a href="/taetigkeiten">Tätigkeiten</a></li>
+           <li {% if page.ref == "referenzen" %}id="active"{% endif %}><a href="/referenzen">Referenzen</a></li>
+           <li {% if page.ref == "galerie" %}id="active"{% endif %}><a href="/galerie">Galerie</a></li>
+           <li {% if page.ref == "kontakt" %}id="active"{% endif %}><a href="/kontakt">Kontakt</a></li>
+         </ul>
+       </div>
+     </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="text-center">
+      <p>2018 &copy; robert-voit.de</p>
+      <p><a href="/impressum">Impressum</a></p>
+      <p><a href="/datenschutzerklaerung">Datenschutzerklärung</a></p>
+      <p><a href="/kontakt">Kontakt</a></p>
+      <div><hr></div>
+      <p>Design by <a target="_blank" href="https://moritz-schramm.com">Moritz Schramm</a></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
