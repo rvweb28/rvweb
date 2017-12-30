@@ -1,0 +1,2 @@
+# Automatically redirect to HTTPS
+http://robert-voit.de/* https://robert-voit.de/:splat 302!
