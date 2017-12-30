@@ -6,7 +6,7 @@ function send() {
     $(".loader").removeClass('hidden');
     $(".loader").fadeIn();
 
-    var $form = $(this);
+    var $form = $("#contact-form");
     $.post($form.attr("action"), $form.serialize()).then(function() {
 
       $("#email").val("");
