@@ -3,6 +3,8 @@ layout: default
 permalink: /
 ref: home
 title: Robert Voit - Holzbildhauer &amp; Schreiner
+includes: contact
+form-name: Startseite-Kontakt
 ---
 
 <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel">
@@ -68,30 +70,7 @@ title: Robert Voit - Holzbildhauer &amp; Schreiner
       <div class="col-md-8 col-md-offset-2"><h2>Kontakt</h2><hr style="margin-top: 0; border-color: #E3493B;"></div>
     </div>
 
-
-
-    <form class="form-horizontal" role="form" method="POST" action="https://formspree.io/voit.robert@t-online.de">
-     <div class="form-group">
-       <label class="control-label col-sm-2" for="email">Ihre E-mail Adresse:</label>
-       <div class="col-sm-10">
-         <input type="email" class="form-input" name="email" placeholder="E-mail Adresse">
-       </div>
-     </div>
-     <div class="form-group">
-       <label class="control-label col-sm-2" for="msg">Ihre Nachricht:</label>
-       <div class="col-sm-10">
-         <textarea name="message" class="form-input" rows="5" style="resize:vertical" placeholder="Nachricht"></textarea>
-       </div>
-     </div>
-
-     <input type="hidden" name="_next" value="https://robert-voit.de/">
-
-     <div class="form-group">
-       <div class="col-sm-offset-2 col-sm-10">
-         <input type="submit" class="btn btn-default pull-left" style="margin-right: 7px;" value="Senden">
-       </div>
-     </div>
-    </form>
+    {% include contact-form.html %}
 
   </div>
 
