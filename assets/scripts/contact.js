@@ -13,6 +13,7 @@ function send() {
       $("#message").val("");
       $("#alert3").removeClass('hidden');
       $(".loader").fadeOut();
+      location.reload();
     });
   }
 }
