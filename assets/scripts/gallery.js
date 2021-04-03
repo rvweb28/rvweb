@@ -74,12 +74,12 @@ $('#next-btn').on('click', function() {
     var imgSrc = $('div[data-img-no="'+currentImg+'"]').attr('data-gallery');
     var caption = $('div[data-img-no="'+currentImg+'"]').next().html();
 
-    modalImg.animate({left: '-100%'}, 350, function() {
+    modalImg.animate({left: '-100%'}, 150, function() {
 
       modalImg.css('left', '100%');
       modalImg.attr('src', imgSrc);
       captionText.html(caption);
-      modalImg.animate({left: '0'}, 150);
+      modalImg.animate({left: '0'}, 100);
     });
   }
 });
@@ -91,12 +91,12 @@ $('#previous-btn').on('click', function() {
     var imgSrc = $('div[data-img-no="'+currentImg+'"]').attr('data-gallery');
     var caption = $('div[data-img-no="'+currentImg+'"]').next().html();
 
-    modalImg.animate({left: '100%'}, 350, function() {
+    modalImg.animate({left: '100%'}, 150, function() {
 
       modalImg.css('left', '-100%');
       modalImg.attr('src', imgSrc);
       captionText.html(caption);
-      modalImg.animate({left: '0'}, 150);
+      modalImg.animate({left: '0'}, 100);
     });
   }
 });
